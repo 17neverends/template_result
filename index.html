@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет накладной</title>
+    <link rel="stylesheet" href="/static/result/style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+    <div class="main">
+        <div class="parametrs">
+            <h3>Параметры расчета</h3>
+            <div class="parametrs-details"></div>
+        </div>
+
+        <div class="additional">
+            <h3>Дополнительные услуги</h3>
+        </div>
+
+        <div class="sender">
+            <h3>Отправитель</h3>
+            <div class="sender-details"></div>
+        </div>
+
+        <div class="recepient">
+            <h3>Получатель</h3>
+            <div class="recepient-details"></div>
+        </div>
+
+        <div class="courier">
+            <h3>Приезд курьера</h3>
+            <div class="courier-details"></div>
+        </div>
+
+        
+        <div class="collecting">
+            <h3>Дополнительный сбор</h3>
+            <div class="collecting-details"></div>
+        </div>
+
+
+    <p style="margin-top: 50px;" class="totalcost"></p>    
+    <p class="delivery_date"></p>
+
+    <button type="button" id="confirm">Создать шаблон</button>
+    <button type="button" id="back">Назад</button>
+    </div>
+    
+    <script src="/static/result/main.js"></script>
+    <script src="main.js"></script>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>  
+
+
+</body>
+</html>
