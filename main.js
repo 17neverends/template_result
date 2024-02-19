@@ -232,7 +232,6 @@ function createKeyValueDiv() {
     let container = document.querySelector('.collecting-details');
 
     for (let key in data.collecting) {
-        // Изменение: проверка, чтобы поле "places" не выводилось
         if (key !== 'places') {
             let div = document.createElement('div');
             div.classList.add('rowitems');
@@ -292,7 +291,6 @@ function createKeyValueDiv() {
     }
 }
 
-// Вызов функции createKeyValueDiv
 createKeyValueDiv();
 
 
@@ -321,3 +319,10 @@ function push_to_page(divname, get_from) {
 
 push_to_page('sender-details', 'sender');
 push_to_page('recepient-details', 'recepient');
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
