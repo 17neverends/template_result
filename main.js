@@ -230,7 +230,27 @@ for (let key in data.additional) {
 
 function createKeyValueDiv() {
     let container = document.querySelector('.collecting-details');
-    push_to_page('collecting-details', 'collecting');
+
+    for (let key in data.collecting) {
+        // Изменение: проверка, чтобы поле "places" не выводилось
+        if (key !== 'places') {
+            let div = document.createElement('div');
+            div.classList.add('rowitems');
+
+            let keyElement = document.createElement('p');
+            keyElement.classList.add('key');
+            keyElement.textContent = labels[key] || key;
+
+            let valueElement = document.createElement('p');
+            valueElement.classList.add('value');
+            valueElement.textContent = data.collecting[key]; 
+
+            div.appendChild(keyElement);
+            div.appendChild(valueElement);
+
+            container.appendChild(div);
+        }
+    }
 
     for (let placeNum in data.collecting.places) {
         let placeDiv = document.createElement('div');
