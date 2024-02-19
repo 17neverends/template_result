@@ -8,7 +8,9 @@ let data = {
         "Тип доставки": "Дверь - магистраль - склад"
     },
     "additional": {
-        "Примерка на дому": "",
+        "Примерка на дому": {
+            "desc": "да"
+        },
         "Воздушно-пузырчатая плёнка": {
             "cost": "700₽",
             "desc": "(10м)"
@@ -41,89 +43,105 @@ let data = {
         "address": "Адрес 2"
     },
 
-    "courier": {
-        "date" : "Дата 1",
-        "time": " Время 1",
-        "break": "Перерыв 1"
-    },
-
     "collecting": {
-        "delivery_cost" : "100",
-        "nds_cost": "20",
-        "total_cost": "120",
+        "delivery_cost" : "100 ₽",
+        "nds_cost_common": "20 ₽",
+        "total_cost": "120 ₽",
         "places": {
             "place_1":
                         {
                             "item_1": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             },
                             "item_2": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             },
                             "item_3": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             }
                         },
             "place_2":
                         {
                             "item_1": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             },
                             "item_2": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             },
                             "item_3": {
                                 "code": "12121",
-                                "name": "Место 1 Товар 1",
-                                "cost": "10000",
+                                "name_item": "Место 1 Товар 1",
+                                "cost": "10000 ₽",
                                 "weight": "10 кг.",
-                                "count": "3",
-                                "amount": "30000",
-                                "nds_count": "200",
-                                "nds_cost": "30200"
+                                "count": "3 шт.",
+                                "amount": "30000 ₽",
+                                "nds_count": "200 ₽",
+                                "nds_cost": "30200 ₽"
                             }
                         }        
         }
     },
     "info": {
-        "Стоимость": "100.00₽",
+        "Стоимость": "100.00 ₽",
         "Срок доставки":"1-2 дня"
     }
+};
+
+const labels = {
+    "name": "ФИО/Компания:",
+    "contact": "Контактное лицо:",
+    "number": "Номер:",
+    "address": "Адрес:",
+    "date": "Дата:",
+    "time": "Время:",
+    "break": "Перерыв:",
+    "code": "Код артикула:",
+    "cost": "Стоимость ед. товара:",
+    "weight": "Вес ед. товара:",
+    "count": "Кол-во ед.:",
+    "amount": "Оплата получателя за ед. товара:",
+    "nds_count": "Ставка НДС:",
+    "nds_cost": "Сумма НДС:",
+    "name_item": "Наименование:",
+    "delivery_cost":"Доп. сбор за доставку с получателя, в т.ч. НДС:",
+    "nds_cost_common":"Ставка НДС за доп. сбор с получателя:",
+    "total_cost":"Сумма за доп. сбор с получателя:"
+
 };
 
 let parametrsDiv = document.querySelector('.parametrs-details');
@@ -210,91 +228,11 @@ for (let key in data.additional) {
     additionalDiv.appendChild(div);
 }
 
-
-let senderDiv = document.querySelector('.sender-details');
-
-const labels = {
-    "name": "ФИО/Компания",
-    "contact": "Контактное лицо",
-    "number": "Номер",
-    "address": "Адрес",
-    "date": "Дата",
-    "time": "Время",
-    "break": "Перерыв",
-    "code": "Артикуль",
-    "cost": "Стоимость ед. товара",
-    "weight": "Вес ед. товара",
-    "count": "Кол-во ед.",
-    "amount": "Стоимость доставки",
-    "nds_count": "Стоимость НДС",
-    "nds_cost": "Общая стоимость"
-};
-
-for (let key in data.sender) {
-    let div = document.createElement('div');
-    div.classList.add('rowitems');
-
-    let keyElement = document.createElement('p');
-    keyElement.classList.add('key');
-    keyElement.textContent = labels[key] || key;
-
-    let valueElement = document.createElement('p');
-    valueElement.classList.add('value');
-    valueElement.textContent = data.sender[key];
-
-    div.appendChild(keyElement);
-    div.appendChild(valueElement);
-
-    senderDiv.appendChild(div);
-}
-
-let recepientDiv = document.querySelector('.recepient-details');
-
-for (let key in data.sender) {
-    let div = document.createElement('div');
-    div.classList.add('rowitems');
-
-    let keyElement = document.createElement('p');
-    keyElement.classList.add('key');
-    keyElement.textContent = labels[key] || key;
-
-    let valueElement = document.createElement('p');
-    valueElement.classList.add('value');
-    valueElement.textContent = data.sender[key];
-
-    div.appendChild(keyElement);
-    div.appendChild(valueElement);
-
-    recepientDiv.appendChild(div);
-}
-
-
-let courierDiv = document.querySelector('.courier-details');
-
-
-for (let key in data.courier) {
-    let div = document.createElement('div');
-    div.classList.add('rowitems');
-
-    let keyElement = document.createElement('p');
-    keyElement.classList.add('key');
-    keyElement.textContent = labels[key] || key;
-
-    let valueElement = document.createElement('p');
-    valueElement.classList.add('value');
-    valueElement.textContent = data.courier[key];
-
-    div.appendChild(keyElement);
-    div.appendChild(valueElement);
-
-    courierDiv.appendChild(div);
-}
-
-
-function createKeyValueDiv(data) {
+function createKeyValueDiv() {
     let container = document.querySelector('.collecting-details');
+    push_to_page('collecting-details', 'collecting');
 
-    for (let placeNum in data) {
+    for (let placeNum in data.collecting.places) {
         let placeDiv = document.createElement('div');
         placeDiv.className = 'place';
         
@@ -302,7 +240,7 @@ function createKeyValueDiv(data) {
         placeHeader.textContent = "Место " + placeNum.slice(-1);
         placeDiv.appendChild(placeHeader);
 
-        let placeData = data[placeNum];
+        let placeData = data.collecting.places[placeNum];
         for (let itemNum in placeData) {
             let itemDiv = document.createElement('div');
             itemDiv.className = 'item';
@@ -313,22 +251,20 @@ function createKeyValueDiv(data) {
 
             let itemData = placeData[itemNum];
             for (let itemInfoKey in itemData) {
-                if (itemInfoKey !== 'name') {
-                    let row = document.createElement('div');
-                    row.className = 'rowitems';
+                let row = document.createElement('div');
+                row.className = 'rowitems';
 
-                    let keyElement = document.createElement('p');
-                    keyElement.className = 'key';
-                    keyElement.textContent = labels[itemInfoKey];
+                let keyElement = document.createElement('p');
+                keyElement.className = 'key';
+                keyElement.textContent = labels[itemInfoKey];
 
-                    let valueElement = document.createElement('p');
-                    valueElement.className = 'value';
-                    valueElement.textContent = itemData[itemInfoKey];
+                let valueElement = document.createElement('p');
+                valueElement.className = 'value';
+                valueElement.textContent = itemData[itemInfoKey];
 
-                    row.appendChild(keyElement);
-                    row.appendChild(valueElement);
-                    itemDiv.appendChild(row);
-                }
+                row.appendChild(keyElement);
+                row.appendChild(valueElement);
+                itemDiv.appendChild(row);
             }
             placeDiv.appendChild(itemDiv);
         }
@@ -336,4 +272,32 @@ function createKeyValueDiv(data) {
     }
 }
 
-createKeyValueDiv(data.collecting.places);
+// Вызов функции createKeyValueDiv
+createKeyValueDiv();
+
+
+
+function push_to_page(divname, get_from) {
+    let div_to_push = document.querySelector(`.${divname}`);
+
+    for (let key in data[`${get_from}`]) {
+        let div = document.createElement('div');
+        div.classList.add('rowitems');
+    
+        let keyElement = document.createElement('p');
+        keyElement.classList.add('key');
+        keyElement.textContent = labels[key] || key;
+    
+        let valueElement = document.createElement('p');
+        valueElement.classList.add('value');
+        valueElement.textContent = data[`${get_from}`][key];
+    
+        div.appendChild(keyElement);
+        div.appendChild(valueElement);
+    
+        div_to_push.appendChild(div);
+    }
+}
+
+push_to_page('sender-details', 'sender');
+push_to_page('recepient-details', 'recepient');

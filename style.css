@@ -21,6 +21,7 @@ h3 {
     font-size: 19px;
     margin-bottom: 30px;
     text-align: center;
+    margin-top: 40px;
 }   
 
 body::-webkit-scrollbar {
@@ -51,7 +52,10 @@ body::-webkit-scrollbar {
 }
 
 
-
+h4 {
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
 
 .additional-item{
     display: flex;
